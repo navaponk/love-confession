@@ -1,0 +1,51 @@
+/* More dramatic animated background */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #000000, #2a0f1f, #4a1f2f);
+    background-size: 400% 400%;
+    animation: gradientBG 8s ease infinite; /* Faster animation */
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Faster gradient animation */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Much stronger canvas glow */
+canvas {
+    box-shadow: 
+        0 0 70px rgba(255, 0, 128, 0.5),  /* Stronger pink glow */
+        0 0 120px rgba(255, 0, 128, 0.3);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+/* More visible mute button */
+button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 20px;  /* Bigger button */
+    background: rgba(255, 255, 255, 0.2);  /* More visible */
+    border: 3px solid rgba(255, 255, 255, 0.3);  /* More visible border */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+    font-size: 20px;  /* Bigger emoji */
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.2) rotate(10deg);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+}
+
